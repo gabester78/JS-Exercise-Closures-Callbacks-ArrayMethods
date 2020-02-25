@@ -179,26 +179,43 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
+// function getFullNames(runners) {
+//   let fullNames = []
+//   runners.forEach((item) => { 
+//     fullNames.push (`${item.last_name}, ${item.first_name}`); 
+//   });
+//   return fullNames;
+// }
 function getFullNames(runners) {
-  let fullNames = []
-  getFullNames.forEach(element => console.log(element));
+  let names = [];
+  runners.forEach((items) => {return names.push(`${items.last_name}, ${items.first_name}`);
+  });
+  return names;
+  }
+
+//  * ### Challenge `firstNamesAllCaps`
+//  * 
+//  * @instructions
+//  * The event director needs to have all the runners' first names 
+//  * in uppercase because the director BECAME DRUNK WITH POWER.
+//  * Implement this function using map().
+//  * 
+//  * @param runners array of runners like the one inside the /data/runners.js file.
+//  * @returns an array with all the runners' first names in ALL CAPS.
+//  * The first names appear in the array in the same order the runners appear in the `runners` array.
+
+function firstNamesAllCaps(runners) {
+  const newFirstName = runners.map((item) => {
+    return item.first_name.toUpperCase();
+  })
+  return newFirstName;
 }
 
-/**
- * ### Challenge `firstNamesAllCaps`
- * 
- * @instructions
- * The event director needs to have all the runners' first names 
- * in uppercase because the director BECAME DRUNK WITH POWER.
- * Implement this function using map().
- * 
- * @param runners array of runners like the one inside the /data/runners.js file.
- * @returns an array with all the runners' first names in ALL CAPS.
- * The first names appear in the array in the same order the runners appear in the `runners` array.
-*/
-function firstNamesAllCaps(/* CODE HERE */) {
-  /* CODE HERE */
-}
+
+//   let fname = []
+//   runners.map((items) => {return fname.push(`${items.first.name}`.touppercase();});
+//   return fname;
+// }
 
 /**
  * ### Challenge `getRunnersByTShirtSize`
